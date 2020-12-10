@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TraqueurGuides</string>
+    <string name="user_name">Nom d\'utilisateur</string>
+    <string name="connect_button">Connection</string>
+</resources>
