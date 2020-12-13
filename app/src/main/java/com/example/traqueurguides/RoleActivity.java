@@ -4,21 +4,49 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.TextView;
 
-import static com.example.traqueurguides.MainActivity.USER_NAME;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class RoleActivity extends AppCompatActivity {
+
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_role);
-
-        Intent intent = getIntent();
-        String userName = intent.getStringExtra(USER_NAME);
+        mAuth = FirebaseAuth.getInstance();
 
         TextView userNameDisplay = findViewById(R.id.userNameDisplay);
-        userNameDisplay.setText(userName);
+        userNameDisplay.setText(mAuth.getCurrentUser().getEmail());
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.menu_logout:
+                logOut();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void logOut() {
+        mAuth.signOut();
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
     }
 }

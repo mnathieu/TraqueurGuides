@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">TraqueurGuides</string>
     <string name="user_name">Nom d\'utilisateur</string>
-    <string name="connect_button">Connection</string>
+    <string name="entry_password">Mot de passe</string>
+    <string name="connect_button">Connexion</string>
+    <string name="button_create_account">Créer un compte</string>
+    <string name="log_out">Déconnexion</string>
 </resources>

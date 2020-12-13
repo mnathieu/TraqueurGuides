@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "411413404593",
+    "project_id": "traqueurguides",
+    "storage_bucket": "traqueurguides.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:411413404593:android:c4d6723383c41d2c1b7b90",
+        "android_client_info": {
+          "package_name": "com.example.traqueurguides"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "411413404593-9s4prfsoejkk44uuedck5piuagbtbka7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAe5sMYoSs6nxKSNqlG7SnKv12GJ91kJFI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "411413404593-9s4prfsoejkk44uuedck5piuagbtbka7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
