@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
         mBinding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
@@ -40,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements
 
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
+        Log.d(TAG, "onCreate dataBase:" + mDatabase );
     }
 
     @Override
